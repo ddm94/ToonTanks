@@ -6,10 +6,24 @@
 #include "GameFramework/Pawn.h"
 #include "PawnBase.generated.h"
 
+// Forward declaration - Keep the number of includes per class to a min. Make this class aware of the reference.
+class UCapsuleComponent;
+
 UCLASS()
 class TOONTANKS_API APawnBase : public APawn
 {
 	GENERATED_BODY()
+
+private:
+
+	UPROPERTY()
+	UCapsuleComponent *CapsuleComp;
+	UPROPERTY()
+	UStaticMeshComponent* BaseMesh;
+	UPROPERTY()
+	UStaticMeshComponent* TurretMesh;
+	UPROPERTY()
+	USceneComponent* ProjectileSpawnPoint;
 
 public:
 	// Sets default values for this pawn's properties
