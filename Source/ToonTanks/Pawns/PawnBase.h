@@ -16,13 +16,14 @@ class TOONTANKS_API APawnBase : public APawn
 
 private:
 
-	UPROPERTY()
-	UCapsuleComponent *CapsuleComp;
-	UPROPERTY()
+	// To get around the error which comes from exposing private properties to a blueprint, we add the following meta specifier.
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true")) 
+	UCapsuleComponent* CapsuleComp;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* BaseMesh;
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* TurretMesh;
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ProjectileSpawnPoint;
 
 public:
