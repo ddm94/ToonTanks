@@ -1,5 +1,15 @@
 [
 	{
+		"file": "D:\\\\Varcx\\\\Unreal Projects\\\\ToonTanks\\\\Source\\\\ToonTanks\\\\Actors\\\\ProjectileBase.cpp",
+		"command": "cl.exe @\"D:\\Varcx\\Unreal Projects\\ToonTanks\\.vscode\\compileCommands_Default\\ToonTanks.182.rsp\"",
+		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\Varcx\\\\Unreal Projects\\\\ToonTanks\\\\Source\\\\ToonTanks\\\\Actors\\\\ProjectileBase.h",
+		"command": "cl.exe @\"D:\\Varcx\\Unreal Projects\\ToonTanks\\.vscode\\compileCommands_Default\\ToonTanks.182.rsp\"",
+		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
 		"file": "D:\\\\Varcx\\\\Unreal Projects\\\\ToonTanks\\\\Source\\\\ToonTanks\\\\Pawns\\\\PawnBase.cpp",
 		"command": "cl.exe @\"D:\\Varcx\\Unreal Projects\\ToonTanks\\.vscode\\compileCommands_Default\\ToonTanks.182.rsp\"",
 		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
