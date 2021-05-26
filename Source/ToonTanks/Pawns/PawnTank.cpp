@@ -17,6 +17,15 @@ APawnTank::APawnTank()
 void APawnTank::BeginPlay()
 {
     Super::BeginPlay();
+
+    // Find active player controller that has been created by the world to handle the player and storing that as our PlayerControllerRef
+    PlayerControllerRef = Cast<APlayerController>(GetController());
+}
+
+void APawnTank::HandleDestruction()
+{
+    Super::HandleDestruction();
+    // Hide Player. TODO - Create new function to handle this
 }
 
 // Called every frame
@@ -26,6 +35,19 @@ void APawnTank::Tick(float DeltaTime)
 
     Rotate(); // Process rotation before any movement is applied
     Move();
+
+    if (PlayerControllerRef)
+    {
+        FHitResult TraceHitResult;
+
+        // Location of where we want the turret to face toward
+        PlayerControllerRef->GetHitResultUnderCursor(ECC_Visibility, false, TraceHitResult);
+
+        // Location in the world that the trace has hit and it's going to be the end location we want our tank turret to look at.
+        FVector HitLocation = TraceHitResult.ImpactPoint;
+
+        RotateTurret(HitLocation);
+    } 
 }
 
 // Called to bind functionality to input
@@ -35,6 +57,7 @@ void APawnTank::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
 
     PlayerInputComponent->BindAxis("MoveForward", this, &APawnTank::CalculateMoveInput);
     PlayerInputComponent->BindAxis("Turn", this, &APawnTank::CalculateRotateInput);
+    PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APawnTank::Fire);
 }
 
 void APawnTank::CalculateMoveInput(float Value)
