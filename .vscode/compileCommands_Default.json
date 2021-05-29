@@ -10,6 +10,16 @@
 		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
 	},
 	{
+		"file": "D:\\\\Varcx\\\\Unreal Projects\\\\ToonTanks\\\\Source\\\\ToonTanks\\\\Components\\\\HealthComponent.cpp",
+		"command": "cl.exe @\"D:\\Varcx\\Unreal Projects\\ToonTanks\\.vscode\\compileCommands_Default\\ToonTanks.182.rsp\"",
+		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\Varcx\\\\Unreal Projects\\\\ToonTanks\\\\Source\\\\ToonTanks\\\\Components\\\\HealthComponent.h",
+		"command": "cl.exe @\"D:\\Varcx\\Unreal Projects\\ToonTanks\\.vscode\\compileCommands_Default\\ToonTanks.182.rsp\"",
+		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
 		"file": "D:\\\\Varcx\\\\Unreal Projects\\\\ToonTanks\\\\Source\\\\ToonTanks\\\\GameModes\\\\TankGameModeBase.cpp",
 		"command": "cl.exe @\"D:\\Varcx\\Unreal Projects\\ToonTanks\\.vscode\\compileCommands_Default\\ToonTanks.182.rsp\"",
 		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
