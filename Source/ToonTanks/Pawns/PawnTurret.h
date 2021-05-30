@@ -25,11 +25,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	virtual void HandleDestruction() override;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	virtual void HandleDestruction() override;
 
 private:
 
@@ -47,5 +47,4 @@ private:
 	void CheckFireCondition();
 
 	float ReturnDistanceToPlayer();
-
 };
