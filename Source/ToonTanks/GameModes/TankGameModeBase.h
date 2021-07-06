@@ -8,6 +8,7 @@
 
 class APawnTurret;
 class APawnTank;
+class APlayerControllerBase;
 
 UCLASS()
 class TOONTANKS_API ATankGameModeBase : public AGameModeBase
@@ -26,16 +27,18 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent)
 	void GameOver(bool PlayerWon);
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Game Loop")
+	int32 StartDelay = 3;
+
 private:
 
 	APawnTank* PlayerTank;
-
+	APlayerControllerBase* PlayerControllerRef;
 	int32 TargetTurrets = 0;
-
+	
 	void HandleGameStart();
-
 	void HandleGameOver(bool PlayerWon);
-
 	int32 GetTargetTurretCount();
+
 
 };

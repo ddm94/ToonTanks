@@ -60,6 +60,16 @@
 		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
 	},
 	{
+		"file": "D:\\\\Varcx\\\\Unreal Projects\\\\ToonTanks\\\\Source\\\\ToonTanks\\\\PlayerControllers\\\\PlayerControllerBase.cpp",
+		"command": "cl.exe @\"D:\\Varcx\\Unreal Projects\\ToonTanks\\.vscode\\compileCommands_ToonTanks\\ToonTanks.182.rsp\"",
+		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\Varcx\\\\Unreal Projects\\\\ToonTanks\\\\Source\\\\ToonTanks\\\\PlayerControllers\\\\PlayerControllerBase.h",
+		"command": "cl.exe @\"D:\\Varcx\\Unreal Projects\\ToonTanks\\.vscode\\compileCommands_ToonTanks\\ToonTanks.182.rsp\"",
+		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
 		"file": "D:\\\\Varcx\\\\Unreal Projects\\\\ToonTanks\\\\Source\\\\ToonTanks\\\\ToonTanks.Build.cs",
 		"command": "cl.exe @\"D:\\Varcx\\Unreal Projects\\ToonTanks\\.vscode\\compileCommands_ToonTanks\\ToonTanks.182.rsp\"",
 		"directory": "D:\\Games\\Epic Games\\UE_4.26\\Engine\\Source"

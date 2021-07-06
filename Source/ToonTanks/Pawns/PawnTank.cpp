@@ -26,6 +26,16 @@ void APawnTank::HandleDestruction()
 {
     Super::HandleDestruction();
     // Hide Player. TODO - Create new function to handle this
+    bIsPlayerAlive = false;
+
+    SetActorHiddenInGame(true);
+    SetActorTickEnabled(false);
+}
+
+// So we know the state of player whilst also ensuring that the actual variable itself is not accessible.
+bool APawnTank::GetIsPlayerAlive()
+{
+    return bIsPlayerAlive;
 }
 
 // Called every frame

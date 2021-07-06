@@ -35,6 +35,8 @@ void UHealthComponent::TakeDamage(AActor *DamageActor, float Damage, const UDama
 	//	Prevent dropping below 0 or getting above the max Health cap
 	Health = FMath::Clamp(Health - Damage, 0.f, DefaultHealth);
 
+	// UE_LOG(LogTemp, Warning, TEXT("Health: %f"), Health);
+
 	if(Health <=0)
 	{
 		if(GameModeRef)
