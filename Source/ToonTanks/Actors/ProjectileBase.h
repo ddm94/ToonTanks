@@ -22,22 +22,26 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	// COMPONENTS
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UProjectileMovementComponent *ProjectileMovement;
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent *ProjectileMesh;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UParticleSystemComponent *ParticleTrail;
 
+	// VARIABLES
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	// Template class
 	TSubclassOf<UDamageType> DamageType; // A way of storing a type as a value in a variable instead of a value.
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Move", meta = (AllowPrivateAccess = "true"))
 	float MovementSpeed = 1300.f;
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage", meta = (AllowPrivateAccess = "true"))
 	float Damage = 50.f;
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	UParticleSystem *HitParticle;
 
+	// FUNCTIONS
 	// Dynamic delegates all need to be declared as UFUNCTION
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent *HitComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, FVector NormalImpulse, const FHitResult &Hit);
