@@ -57,10 +57,11 @@ void ATankGameModeBase::HandleGameStart()
     {
         PlayerControllerRef->SetPlayerEnabledState(false);
 
-        FTimerHandle PlayerEnableHandle;
-        FTimerDelegate PlayerEnableDelegate = FTimerDelegate::CreateUObject(PlayerControllerRef, &APlayerControllerBase::SetPlayerEnabledState, true);
-
         // TO DO Implement SetTimer
+        FTimerHandle PlayerEnableHandle;
+        FTimerDelegate PlayerEnableDelegate = FTimerDelegate::CreateUObject(PlayerControllerRef, 
+        &APlayerControllerBase::SetPlayerEnabledState, true);
+        GetWorld()->GetTimerManager().SetTimer(PlayerEnableHandle, PlayerEnableDelegate, StartDelay, false);
     }
 }
 
